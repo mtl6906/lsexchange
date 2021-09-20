@@ -15,5 +15,3 @@ add_library(lsexchange SHARED ${SRC})
 install(TARGETS lsexchange DESTINATION lib)
 
 install(DIRECTORY include/ls/exchange DESTINATION include/ls)
-
-#target_link_libraries(testcase lshttp lsexception lscstring lsitem lscopyableitem lslogger lstime lsssl lsio ssl lsbuffer lsnet lsepoll lsjson lssha256)
