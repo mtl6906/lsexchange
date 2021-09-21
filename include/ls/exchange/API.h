@@ -23,6 +23,7 @@ namespace ls
 				virtual std::pair<int, double> getBuyOrderNumberAndMax(const std::string &coin) = 0;
 			protected:
 				std::string signature(const std::vector<std::string> &v);
+				virtual std::string getTimeStamp() = 0;
 				virtual std::string order(const std::string &coin, double price, double number, const std::string &side) = 0;
 				std::string transacation(const std::string &method, const std::string &path, const std::string &body = "", const std::map<std::string, std::string> &attribute = std::map<std::string, std::string>());
 				exchange::Config config;
