@@ -126,13 +126,9 @@ namespace ls
 
 		std::string API::signature(const vector<string> &v)
 		{
-			int los;
-			for(auto &i : v)
-				los += i.size();
-			string signaturePayload(los, '\0');
-			char *text = (char *)signaturePayload.c_str();
-			for(auto &i : v)
-				text = cstring::api.append(text, i.c_str());
+			string signaturePayload;
+			for(auto &it : v)
+				signaturePayload += it;
 			ls::SHA256 sha256;
 			return sha256.hmac(signaturePayload, config.secretKey);				
 		}	
