@@ -82,7 +82,7 @@ namespace ls
 				request.setAttribute(attribute.first, attribute.second);
 			ssl::Client sslClient;
 			unique_ptr<ssl::Connection> connection(sslClient.getConnection(net::Client(config.ip, 443).connect()));
-			connection -> setHostname(url);
+			connection -> setHostname(config.apiURL);
 			connection -> connect();
 			
 			out.reset(connection -> getWriter());
