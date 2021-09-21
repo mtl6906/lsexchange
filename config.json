@@ -1,0 +1,12 @@
+{
+	"apiKey": "",
+	"secretKey": "",
+	"ip": "",
+	"apiURL": "",
+	"buyText": "",
+	"sellText": "",
+	"coin": "",
+	"number": 1,
+	"rate": 0.003,
+	"uprate": "0.007"
+}
