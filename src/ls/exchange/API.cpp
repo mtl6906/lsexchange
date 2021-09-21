@@ -120,6 +120,7 @@ namespace ls
 				}
 				break;
 			}
+			LOGGER(ls::INFO) << "response: " << result << ls::endl;
 			return result;
 		}
 
